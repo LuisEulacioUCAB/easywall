@@ -1,5 +1,5 @@
 {
-  "name": "digitalroom-easywall",
+  "name": "@digitalroom/easy-wall",
   "version": "1.0.0",
   "description": "Easy wall provider",
   "main": "lib/index.js",
@@ -8,6 +8,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
     "dev": "tsc -w"
+  },
+  "homepage": "https://github.com/LuisEulacioUCAB/easywall",
+  "bugs": {
+    "url": "https://github.com/LuisEulacioUCAB/easywall/issues"
   },
   "keywords": [],
   "author": "",
