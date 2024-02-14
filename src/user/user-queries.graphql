@@ -1,0 +1,100 @@
+mutation Signup($email: String!, $password: String!, $name: String!, $url: String!) {
+    signup(email: $email, password: $password, name: $name, url: $url) {
+        user {
+            id
+        }
+        token
+    }
+}
+
+mutation googleSignup($token: String!, $url: String) {
+    googleSignup(token: $token, url:$url) {
+        user {
+            id
+        }
+        token
+    }
+}
+
+
+mutation Recaptcha($email: String!, $token: String!) {
+    recaptcha(email: $email, token: $token) {
+        success
+    }
+}
+
+query CurrentUser{
+    currentUser {
+        id
+        name
+        email
+        avatar
+        sex
+        birthday
+        social_providers {
+            id
+            provider
+            provider_id
+        }
+        role{
+            id
+            name
+        }
+    }
+}
+
+
+mutation ForgotPassword($email: String!, $redirectUrl: String!, $form: String!) {
+    forgotPassword(email: $email, redirectUrl: $redirectUrl, form: $form) {
+        success
+    }
+}
+
+
+
+mutation ChangePassword($email: String!, $password: String!, $token: String!) {
+    changePassword(email: $email, password: $password, token: $token) {
+        user{
+            id
+        }
+        token
+    }
+}
+
+mutation UpdateUser ($data: UpdateUserInput){
+    updateUser(data: $data) {
+        id
+        name
+        email
+        avatar
+        sex
+        birthday
+    }
+}
+
+mutation FacebookSignup($token: String!, $url: String) {
+    facebookSignup(token: $token, url: $url) {
+        user {
+            id
+        }
+        token
+    }
+}
+
+mutation AppleSignup($token: String!, $url: String) {
+    appleSignup(token: $token, url: $url) {
+        user {
+            id
+        }
+        token
+    }
+}
+
+mutation Login($email: String!, $password: String!) {
+    login(email: $email, password: $password) {
+        user{
+            id
+        }
+        token
+    }
+}
