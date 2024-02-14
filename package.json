@@ -21,6 +21,10 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LuisEulacioUCAB/easywall.git"
+  },
   "devDependencies": {
     "@apollo/client": "^3.9.4",
     "@babel/core": "^7.23.9",
